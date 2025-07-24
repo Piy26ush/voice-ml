@@ -1,26 +1,13 @@
+import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 import pickle
 
-# 🗂️ Step 1: Sample Training Data (Text, Intent)
-training_data = [
-    ("start recording", "start_recording"),
-    ("begin audio capture", "start_recording"),
-    ("can you record", "start_recording"),
-    ("stop recording now", "stop_recording"),
-    ("please stop the recorder", "stop_recording"),
-    ("take a photo", "open_camera"),
-    ("open the camera", "open_camera"),
-    ("show me the camera", "open_camera"),
-    ("call emergency", "emergency_call"),
-    ("i need help", "emergency_call"),
-    ("open my profile", "show_profile"),
-    ("show my account", "show_profile"),
-]
-
-# Separate inputs and labels
-X, y = zip(*training_data)
+# 📥 Step 1: Load training data from CSV
+data = pd.read_csv("intent_data.csv")  # Ensure intent_data.csv is in the same folder
+X = data["text"]
+y = data["intent"]
 
 # 🧠 Step 2: Create the ML pipeline
 model = Pipeline([

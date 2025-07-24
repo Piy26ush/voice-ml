@@ -1,0 +1,26 @@
+text,intent
+start recording,start_recording
+begin audio capture,start_recording
+can you record,start_recording
+please start the recording,start_recording
+initiate voice capture,start_recording
+stop recording now,stop_recording
+please stop the recorder,stop_recording
+end the recording,stop_recording
+halt voice capture,stop_recording
+recording off,stop_recording
+take a photo,open_camera
+open the camera,open_camera
+show me the camera,open_camera
+launch the camera app,open_camera
+click a picture,open_camera
+call emergency,emergency_call
+i need help,emergency_call
+emergency call,emergency_call
+help me now,emergency_call
+dial emergency number,emergency_call
+open my profile,show_profile
+show my account,show_profile
+view profile,show_profile
+go to profile page,show_profile
+display my profile,show_profile
